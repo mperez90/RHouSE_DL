@@ -1,0 +1,47 @@
+{
+    "product": "RHouSE",
+    "name": "Rural Housing Search Engine",
+    "current_version": "0.0.2",
+    "release_date": "2026-01-17",
+    "minimum_version": "0.0.1",
+    "update_required": false,
+    "changelog": "https://mperez90.github.io/RHouSE_DL/changelog.html",
+    "downloads": {
+        "mac_arm64": {
+            "url": "https://github.com/mperez90/RHouSE_DL/releases/download/v0.0.2/RHouSE_Mac_ARM64.dmg",
+            "size_mb": 150,
+            "checksum_sha256": ""
+        },
+        "mac_intel": {
+            "url": "https://github.com/mperez90/RHouSE_DL/releases/download/v0.0.2/RHouSE_Mac_Intel.dmg",
+            "size_mb": 150,
+            "checksum_sha256": ""
+        },
+        "windows_x64": {
+            "url": "https://github.com/mperez90/RHouSE_DL/releases/download/v0.0.2/RHouSE_Win_x64.exe",
+            "size_mb": 180,
+            "checksum_sha256": ""
+        }
+    },
+    "models": {
+        "rhouse_medium_v1": {
+            "url": "https://github.com/mperez90/RHouSE_DL/releases/download/v0.0.2/rhouse_medium_v1.pt",
+            "version": "1.0",
+            "size_mb": 25
+        },
+        "rhouse_large_v1": {
+            "url": "https://github.com/mperez90/RHouSE_DL/releases/download/v0.0.2/rhouse_large_v1.pt",
+            "version": "1.0",
+            "size_mb": 60
+        }
+    },
+    "announcements": [
+        {
+            "id": 1,
+            "type": "info",
+            "title": "Bienvenido a RHouSE",
+            "message": "Gracias por usar RHouSE. Revisa las últimas actualizaciones.",
+            "date": "2026-01-17"
+        }
+    ]
+}

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RHouSE - Descargas | Rural Housing Search Engine</title>
+    <meta name="description"
+        content="Descarga RHouSE - Plataforma de IA para diseño de redes de electrificación rural.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3c72;
+            --primary-light: #2a5298;
+            --accent: #38ef7d;
+            --accent-dark: #11998e;
+            --text: #333;
+            --text-light: #666;
+            --bg: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .logo {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero .subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+        }
+
+        .version-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .download-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--white);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .download-btn i {
+            font-size: 2rem;
+        }
+
+        .download-btn .text {
+            text-align: left;
+        }
+
+        .download-btn .text small {
+            display: block;
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+
+        .features {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .feature-card {
+            background: var(--bg);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .about {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            text-align: center;
+        }
+
+        .about-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 3rem;
+            color: var(--white);
+        }
+
+        .about h2 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .about p {
+            color: var(--text-light);
+            max-width: 500px;
+            margin: 0 auto 1rem;
+            font-style: italic;
+        }
+
+        .about a {
+            color: var(--primary);
+        }
+
+        footer {
+            background: #0a1628;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .download-btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">🏠</div>
+            <h1>R<span>Hou</span>SE</h1>
+            <p class="subtitle">Rural Housing Search Engine</p>
+            <span class="version-badge" id="version-badge">v0.0.2 • Enero 2026</span>
+
+            <div class="download-section">
+                <h3 style="color: white; margin-bottom: 0.5rem;">Descargar RHouSE</h3>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Diseña redes de electrificación rural con IA
+                </p>
+
+                <div class="download-buttons">
+                    <a href="https://github.com/mperez90/RHouSE_DL/releases/latest/download/RHouSE_Mac.dmg"
+                        class="download-btn">
+                        <i class="fab fa-apple"></i>
+                        <div class="text">
+                            <small>Descargar para</small>
+                            <span>macOS</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/mperez90/RHouSE_DL/releases/latest/download/RHouSE_Win.exe"
+                        class="download-btn">
+                        <i class="fab fa-windows"></i>
+                        <div class="text">
+                            <small>Descargar para</small>
+                            <span>Windows x64</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Detección con IA</h3>
+                    <p>YOLOv11 detecta automáticamente viviendas rurales desde imágenes satelitales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-network-wired"></i></div>
+                    <h3>Diseño Automático</h3>
+                    <p>Genera trazados de red MT/BT, postes, transformadores y presupuestos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Asistente LLM</h3>
+                    <p>Modifica diseños con comandos en lenguaje natural.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-photo"><i class="fas fa-user"></i></div>
+        <h2>Mauricio Perez</h2>
+        <p>"Un proyecto hecho con esfuerzo, amor por el trabajo y pensando en solucionar una necesidad real."</p>
+        <a href="mailto:mperez0790@gmail.com"><i class="fas fa-envelope"></i> mperez0790@gmail.com</a>
+    </section>
+
+    <footer>
+        <p>© 2026 RHouSE — Rural Housing Search Engine</p>
+        <p>Hecho con ❤️ en Colombia</p>
+    </footer>
+
+    <script>
+        // Load version from manifest
+        fetch('version.json')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('version-badge').textContent =
+                    `v${data.current_version} • ${data.release_date}`;
+            })
+            .catch(() => { });
+    </script>
+</body>
+
+</html>
